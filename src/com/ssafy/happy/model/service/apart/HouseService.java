@@ -6,6 +6,6 @@ import com.ssafy.happy.model.dto.apart.HouseDealDTO;
 
 public interface HouseService {
 
-	List<HouseDealDTO> searchAll();
+	List<HouseDealDTO> selectHouse(String dong) throws Exception;
 
 }

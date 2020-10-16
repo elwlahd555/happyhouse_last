@@ -30,6 +30,7 @@ import com.ssafy.happy.controller.login.LOGIN_ResetPassController;
 import com.ssafy.happy.controller.login.LOGIN_UpdateController;
 import com.ssafy.happy.controller.map.MAP_DongController;
 import com.ssafy.happy.controller.map.MAP_GugunController;
+import com.ssafy.happy.controller.map.MAP_HouseController;
 import com.ssafy.happy.controller.map.MAP_SidoController;
 import com.ssafy.happy.controller.user.USER_DELETEController;
 import com.ssafy.happy.controller.user.USER_DetailController;
@@ -67,6 +68,7 @@ public class ActionHandlerMapping {
 			mapping.put("MAP_SIDO", new MAP_SidoController());
 			mapping.put("MAP_GUGUN", new MAP_GugunController());
 			mapping.put("MAP_DONG", new MAP_DongController());
+			mapping.put("MAP_HOUSE", new MAP_HouseController());
 			
 			
 			mapping.put("APT_AIRPULL", new APART_AirpullController());

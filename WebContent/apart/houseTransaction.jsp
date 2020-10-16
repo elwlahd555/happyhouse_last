@@ -75,25 +75,27 @@
 										);//get
 									});//change
 									$("#dong").change(function() {
-										$.get("${pageContext.request.contextPath}/main.do"
-												,{action:"APT_HOUSETRANSACTION", dong:$("#dong").val()}
-												,function(data, status){
-													$("#searchResult").empty();
-													$.each(data, function(index, vo) {
-														let str = "<tr class="+colorArr[index%3]+">"
-														+ "<td>" + vo.no + "</td>"
-														+ "<td>" + vo.dong + "</td>"
-														+ "<td>" + vo.aptName + "</td>"
-														+ "<td>" + vo.jibun + "</td>"
-														+ "<td>" + vo.code
-														+ "</td><td id='lat_"+index+"'></td><td id='lng_"+index+"'></td></tr>";
-														$("#searchResult").append(str);
-				//										$("#searchResult").append(vo.dong+" "+vo.aptName+" "+vo.jibun+"<br>");
-													});//each
-													geocode(data);
-												}//function
-												, "json"
-										);//get
+			                              $.get("${pageContext.request.contextPath}/main.do"
+			                                    ,{action:"MAP_HOUSE", dong:$("#dong").val()}
+			                                    ,function(data, status){
+			                                       $("#searchResult").empty();
+			                                       $.each(data, function(index, vo) {
+			                                          let str = "<tr class="+colorArr[index%3]+">"
+			                                          + "<td>" + vo.no + "</td>"
+			                                          + "<td>" + vo.dong + "</td>"
+			                                          + "<td>" + vo.aptName + "</td>"
+			                                          + "<td>" + vo.jibun + "</td>"
+			                                          + "<td>" + vo.code
+			                                          + "</td><td id='lat_"+index+"'></td><td id='lng_"+index+"'></td></tr>";
+			                                          $("#searchResult").append(str);
+			            //                              $("#searchResult").append(vo.dong+" "+vo.aptName+" "+vo.jibun+"<br>");
+			                                       
+			                                          
+			                                       });//each
+			                                       geocode(data);
+			                                    }//function
+			                                    , "json"
+			                              );//get
 									});//change
 								});//ready
 								function geocode(jsonData) {
@@ -135,6 +137,7 @@
 							 <input type="text">
 							&nbsp; &nbsp;
 							<button>검색</button>
+							<button>관심지역추가</button>
 						</div>
 
 					</div>
