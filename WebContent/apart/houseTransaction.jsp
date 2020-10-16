@@ -239,7 +239,7 @@
 									<th>아파트이름</th>
 									<th>거래금액</th>
 									<th>거래종류</th>
-									<th>추가</th>
+								
 								</tr>
 							</thead>
 							<tfoot>
@@ -249,7 +249,7 @@
 									<th>아파트이름</th>
 									<th>거래금액</th>
 									<th>거래종류</th>
-									<th>추가</th>
+								
 								</tr>
 							</tfoot>
 							<tbody id = "searchResult">
@@ -262,10 +262,7 @@
 									
 										<td>${house.dealAmount}</td>
 										<td>${house.type}</td>
-										<td><input type="button" class = "btn btn-success"  id="button_${count.index+1}_${house.dong}" name="button_${count.index+1}" value = "추가">
-										<input type = "hidden" value = "${house.no }" id = "lto">
-										
-										</td>
+						
 									</tr>
 								</c:forEach>
 
